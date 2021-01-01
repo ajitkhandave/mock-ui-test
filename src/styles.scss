@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+$fa-font-path: '../node_modules/@fortawesome/fontawesome-free/webfonts';
+$custom-font-path: './assets/fonts/Graphik-Regular.otf';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '../node_modules//@fortawesome/fontawesome-free/scss/solid.scss';
+@import '../node_modules//@fortawesome/fontawesome-free/scss/brands.scss';
+@import '../src/assets/style/variable.scss';
+
+body {
+  background: $white-secondary;
+}

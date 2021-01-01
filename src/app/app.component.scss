@@ -1,0 +1,408 @@
+@import '../assets/style/variable.scss';
+@import '../assets/style/mixins';
+
+.header-wrapper {
+  background: url('../assets/images/leaves.svg');
+  background-repeat: no-repeat;
+  background-position: -10% -80px;
+  background-color: #fff;
+}
+.header-social-block {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  font-size: 12px;
+
+  .header-contact {
+    margin-right: 20px;
+    .fa-phone {
+      background: $primary-blue;
+      color: $white;
+      border-radius: 50%;
+      padding: 5px;
+      transform: rotate(90deg);
+    }
+  }
+  .header-mail-id {
+    .fa-envelope {
+        background: $primary-blue;
+        color: $white;
+        border-radius: 50%;
+        padding: 5px;
+      }
+  }
+}
+.navbar {
+  @include desktop {
+    padding-bottom: 0;  
+  }  
+  .logo-img {
+    width: 100px;
+    @include desktop {
+      position: absolute;
+      left: 44%;
+      bottom: -60%;
+    }
+    
+  }
+  .navbar-collapse {
+    @include desktop {
+      justify-content: center;
+    }
+    .navbar-nav {
+      .nav-item {
+        color: $primary-blue;
+        .nav-link {
+          color: inherit;
+          text-transform: uppercase;
+          font-weight: 700;
+          cursor: pointer;
+        }    
+        @include desktop {
+          margin: 0 30px;
+        }
+        &:nth-child(3) {
+          @include desktop {
+            margin-right: 100px;
+          }
+        }
+        &:nth-of-type(4) {
+          @include desktop {
+            margin-left: 100px;
+          }
+        }
+      }
+      .nav-item.active {
+        border-bottom: 4px solid $light-green;
+      }
+    }
+  }
+}
+.home-section {
+  height: 500px;
+  background: url('../assets/images/home-banner.jpg');
+  background-size: 100% 100%;
+  display: flex;
+  .home-empty-block {
+    @include tablet{
+      display: none;
+    }
+  }
+  .home-middle-block {
+    .home-middle-title{
+      color: $white;
+      font-weight: 700;
+      font-size: 20px;
+      border-top: 2px dotted;
+      border-bottom: 2px dotted;
+      padding: 10px 0;
+      margin-bottom: 30px;
+    }
+    .home-middle-btn {
+      color: $white;
+      font-size: 16px;
+      font-weight: 600;
+      background: $light-green;
+    }   
+  }
+  .home-nav-block {
+    .nav-item {
+      list-style-type: none;
+      color: $white;
+      .nav-link {
+        color: inherit;
+        text-transform: uppercase;
+
+        &::after {
+          content: '\f111';
+          font-family: 'Font Awesome 5 Free';
+          margin-left: 5px;
+          font-size: 12px;
+        }
+      }
+    }
+    .nav-item.active {
+      color: $light-green;
+    }
+  }
+}
+.product-section {
+  .product-section-title {
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-weight: 700;
+  }
+  .product-section-wrapper {
+    @include tablet {
+      display: flex;
+    }
+    
+    .product-details {
+      padding: 0 30px;
+      text-align: center;
+      margin: 30px 0;
+      color: $primary-blue;
+      .product-img {
+        width: 100px;
+      }
+      .product-title {
+        margin: 10px 0;
+        position: relative;
+      }
+      .product-subtitle {
+        font-size: 14px;
+      }
+    }
+    .product-left-block {
+      .product-details {
+        .product-title {
+          @include tablet {  
+            &::after {
+                content:'';
+                background: $primary-blue;
+                width: 50px;
+                height: 2px;
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                z-index: 1;
+            }
+          }
+        }
+      }
+    }
+    .product-right-block {
+      .product-details {
+        .product-title {
+          @include tablet {
+            &::before {
+                content:'';
+                background: $primary-blue;
+                width: 50px;
+                height: 2px;
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                z-index: 1;
+            }
+          }
+        }
+      }
+    }
+    .product-content-block {
+      background: $light-green;
+      color: $white;
+      padding: 80px 35px 10px 35px;
+      text-align: center;
+
+      .product-content-block-btn {
+        color: $white;
+        font-size: 16px;
+        font-weight: 600;
+        background: $primary-blue;
+      }
+      .product-combo-img {
+        @include tablet {
+          display: inline-block;
+          position: absolute;
+          bottom: -100px;
+          width: 125%;
+          height: 300px;
+          left: -95px;
+          z-index: 0;
+        }
+        display: none;
+      }
+    }
+  }
+}
+.product-grid-block {
+  @include tablet {
+    margin-top: 200px;
+  }
+  
+  .product-section-title {
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-weight: 700;
+  }
+  .product-grid-inner-block {
+    @include tablet {
+      display: flex;
+      padding: 0 100px;
+    }
+    
+    padding: 0 30px;
+    margin-top: 80px;
+
+    .product-grid {
+      margin: 0 10px;
+
+      .product-grid-img {
+        width: 80px;
+        height: 120px;
+        position: absolute;
+        left: 10px;
+        top: -60px;
+      }
+      .product-grid-logo {
+        width: 50px;
+        float: right;
+        margin-top: 10px;
+      }
+      .product-grid-title {
+        margin-top: 80px;
+        color: $white;
+        @include tablet {
+          padding-top: 0;
+        }
+        padding-top: 80px;
+      }
+      .product-grid-subtitle {
+        color: $white;
+      }
+    }
+    .product-grid-flame {
+      background: $light-pink;
+    }
+    .product-grid-bird {
+      background: $secondary-blue;
+    }
+    .product-grid-pets {
+      background: $light-purple;
+    }
+  }
+}
+.product-list-block {
+  margin: 30px 0;
+  text-align: center;
+
+  .product-list-title {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 700;
+  }
+  .product-list-btn {
+    color: $white;
+    font-size: 16px;
+    font-weight: 600;
+    background: $light-green;
+    margin: 15px 0;
+  }
+  .product-list-inner-block {
+    @include tablet {
+      display: flex;
+    }
+    margin: 15px 0;
+
+    .product-list-product-wrapper {
+      .product-list-product {
+        background: $white;
+        text-align: center;
+        padding: 10px 0;
+        margin: 10px 0;
+
+        .product-list-img {
+          width: 100px;
+          height: 150px;
+        }
+        .product-list-title {
+          font-size: 16px;
+          color: $primary-blue;
+          text-transform: uppercase;
+          margin-bottom: 0;
+        }
+        .product-list-subtitle {
+          font-size: 14px;
+          color: $silver;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+.footer {
+  background: url('../assets/images/Footer.png');
+  background-position: 50% 65%;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  background-color: $white;
+  padding: 20px;
+  @include tablet {
+    display: flex;
+  }
+  @include onlyMobile {
+    background-position: 70% 110%;
+  }
+
+  .footer-block-title {
+    font-size: 18px;
+    color: $primary-blue;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .footer-content {
+    font-size: 14px;
+    color: $primary-blue;
+  }
+  .footer-contact-block {
+    padding: 0 30px;
+    @include onlyMobile {
+      padding: 0;
+    }
+  }
+  .footer-nav-block {
+    @include onlyMobile {
+      padding: 0;
+      margin: 20px 0;
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: $primary-blue;
+          font-size: 14px;
+          padding: 0;
+          cursor: pointer;
+
+          &::before {
+            content: '\f105';
+            font-family: 'Font Awesome 5 Free';
+            margin-right: 5px;
+            font-size: 12px;
+            opacity: .5;
+          }
+        }
+      }
+    }
+    .social-block {
+      margin-top: 20px;
+      .social-icon {
+        color: $white;
+        background: $primary-blue;
+        margin: 0 5px;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 12px;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+      }
+    }
+  }
+  .footer-more-info-block {
+    @include onlyMobile {
+      padding: 0;
+      margin-bottom: 30px;
+    }
+    .footer-info-btn {
+      color: $white;
+      font-size: 16px;
+      font-weight: 600;
+      background: $light-green;
+      margin: 15px 0;
+    }
+  }
+}

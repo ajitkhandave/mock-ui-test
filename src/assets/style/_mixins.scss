@@ -1,0 +1,62 @@
+/*
+ * Breakpoints
+ *
+*/
+
+
+// Mobile
+@mixin mobile {
+  @media screen and (min-width: 385px) {
+    @content;
+  }
+}
+
+@mixin onlyMobile {
+  @media screen and(max-width:768px){
+    @content;
+  }  
+}
+
+@mixin mobileLandscape {
+  @media only screen and (max-width: 767px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+// Tablet
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+// Desktop
+@mixin desktop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin between($from, $to) {
+  @media screen and (min-width: $from) and (max-width: $to) {
+    @content;
+  }
+}
+
+@mixin until($until) {
+  @media screen and (max-width: $until) {
+    @content;
+  }
+}
+
+@mixin startFrom($startFrom) {
+  @media screen and (min-width: $startFrom) {
+    @content;
+  }
+}
+
+
+/*
+ * Icons
+ *
+*/

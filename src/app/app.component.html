@@ -1,0 +1,202 @@
+<header class="header-wrapper">
+  <div class="header-social-block">
+    <span class="header-contact"><i class="fas fa-phone"></i> 0123 - 456 789</span>
+    <span class="header-mail-id"><i class="fas fa-envelope"></i> INFO@MY-SEASONS.NL</span>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <img class="logo-img d-inline-block d-sm-none" src="../assets/images/logo-main.png">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item" [ngClass]="{'active': selectedNav == 'home'}" (click)="navigateClick('home')">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active': selectedNav == 'product'}" (click)="navigateClick('product')">
+          <a class="nav-link" href="#product">Producten</a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active': selectedNav == 'verkooppunten'}" (click)="navigateClick('verkooppunten')">
+          <a class="nav-link" href="#verkooppunten">Verkooppunten</a>
+        </li>
+        <img class="logo-img d-none d-md-inline-block" src="../assets/images/logo-main.png">
+        <li class="nav-item" [ngClass]="{'active': selectedNav == 'nieuws'}" (click)="navigateClick('nieuws')">
+          <a class="nav-link">Nieuws</a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active': selectedNav == 'myseasons'}" (click)="navigateClick('myseasons')">
+          <a class="nav-link" href="#myseasons">Over Myseasons</a>
+        </li>
+        <li class="nav-item" [ngClass]="{'active': selectedNav == 'klantenservice'}" (click)="navigateClick('klantenservice')">
+          <a class="nav-link">Klantenservice</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<section class="home-section align-items-center" id="home">
+  <article class="home-empty-block d-none d-md-flex col-4"></article>
+  <article class="home-middle-block col-12 col-md-4 text-center">
+    <p class="home-middle-title text-uppercase">lorem ipsum dolor sit amet <br> commodo egulia</p>
+    <button type="button" class="btn home-middle-btn text-uppercase">bekijk producten ></button>
+  </article>
+  <article class="home-nav-block d-none d-md-flex col-md-4 text-right flex-column">
+    <li class="nav-item" [ngClass]="{'active': selectedNav == 'home'}" (click)="navigateClick('home')">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item" [ngClass]="{'active': selectedNav == 'product'}" (click)="navigateClick('product')">
+      <a class="nav-link" href="#product">Producten</a>
+    </li>
+    <li class="nav-item" [ngClass]="{'active': selectedNav == 'verkooppunten'}" (click)="navigateClick('verkooppunten')">
+      <a class="nav-link" href="#verkooppunten">Verkooppunten</a>
+    </li>
+    <li class="nav-item" [ngClass]="{'active': selectedNav == 'myseasons'}" (click)="navigateClick('myseasons')">
+      <a class="nav-link" href="#myseasons">Over Myseasons</a>
+    </li>
+  </article>
+</section>
+<section class="product-section align-items-center" id="product">
+  <h2 class="product-section-title text-center text-uppercase">producten</h2>
+  <section class="product-section-wrapper col-12">
+  <aside class="col-12 col-md-4 product-left-block">
+    <div class="product-details">
+      <img class="product-img" src="../assets/images/buitenkaars-berk.png">
+      <h4 class="product-title text-uppercase">nunc congue et risus</h4>
+      <p class="product-subtitle">Etium rhoncus. Maecenas tempus, tellus eget condimentum rhoncus. sem quam</p>
+    </div>
+    <div class="product-details">
+      <img class="product-img" src="../assets/images/Pellentesque.png">
+      <h4 class="product-title text-uppercase">suspendisse vitae est</h4>
+      <p class="product-subtitle">Etium rhoncus. Maecenas tempus, tellus eget condimentum rhoncus. sem quam</p>
+    </div>
+  </aside>
+  <aside class="col-12 col-md-4 product-content-block">
+    <h3 class="product-content-block-title text-uppercase">sed eget tortor libero. proin pellentesque</h3>
+    <p class="product-content-block-details">Etium rhoncus. Maecenas tempus, tellus eget condimentum rhoncus. 
+      sem quam Etium rhoncus. Maecenas tempus, tellus eget condimentum rhoncus. sem quam</p>
+    <button type="button" class="btn product-content-block-btn text-uppercase">bekijk producten ></button>
+    <img class="product-combo-img" src="../assets/images/combo-image.png">
+  </aside>
+  <aside class="col-12 col-md-4 product-right-block">
+    <div class="product-details">
+      <img class="product-img" src="../assets/images/Pellentesque.png">
+      <h4 class="product-title text-uppercase">suspendisse vitae est</h4>
+      <p class="product-subtitle">Etium rhoncus. Maecenas tempus, tellus eget condimentum rhoncus. sem quam</p>
+    </div>
+    <div class="product-details">
+      <img class="product-img" src="../assets/images/buitenkaars-berk.png">
+      <h4 class="product-title text-uppercase">nunc congue et risus</h4>
+      <p class="product-subtitle">Etium rhoncus. Maecenas tempus, tellus eget condimentum rhoncus. sem quam</p>
+    </div>
+  </aside>
+  </section>
+</section>
+<section class="product-grid-block" id="verkooppunten">
+  <h2 class="product-section-title text-center text-uppercase">verkooppunten</h2>
+  <div class="product-grid-inner-block">
+    <div class="product-grid product-grid-flame col-12 col-md-4">
+      <img class="product-grid-img" src="../assets/images/buitenkaars-berk.png">
+      <img class="product-grid-logo" src="../assets/images/logo-main.png">
+      <h4 class="product-grid-title text-uppercase">fire & flames</h4>
+      <p class="product-grid-subtitle">Bekijk de producten</p>
+    </div>
+    <div class="product-grid product-grid-bird col-12 col-md-4">
+      <img class="product-grid-img" src="../assets/images/bird-house.png">
+      <img class="product-grid-logo" src="../assets/images/logo-main.png">
+      <h4 class="product-grid-title text-uppercase">birds & insects</h4>
+      <p class="product-grid-subtitle">Bekijk de producten</p>
+    </div>
+    <div class="product-grid product-grid-pets col-12 col-md-4">
+      <img class="product-grid-img" src="../assets/images/pets.png">
+      <img class="product-grid-logo" src="../assets/images/logo-main.png">
+      <h4 class="product-grid-title text-uppercase">pets & animals</h4>
+      <p class="product-grid-subtitle">Bekijk de producten</p>
+    </div>
+  </div>
+</section>
+<section class="product-list-block" id="myseasons">
+  <h2 class="product-list-title">over myseasons</h2>
+  <div class="product-list-inner-block">
+    <div class="col-md-1 d-none d-md-flex"></div>
+    <div class="col-12 col-md-2 product-list-product-wrapper">
+      <div class="product-list-product">
+        <img class="product-list-img" src="../assets/images/buitenkaars.png">
+        <h4 class="product-list-title">buitenkaars berk</h4>
+        <p class="product-list-subtitle">yenat 4.99</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-2 product-list-product-wrapper">
+      <div class="product-list-product">
+        <img class="product-list-img" src="../assets/images/product-1.png">
+        <h4 class="product-list-title">wind candle (maat s & l)</h4>
+        <p class="product-list-subtitle">yenat 4.99</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-2 product-list-product-wrapper">
+      <div class="product-list-product">
+        <img class="product-list-img" src="../assets/images/product-2.png">
+        <h4 class="product-list-title">zweedse fakkel 4-pack</h4>
+        <p class="product-list-subtitle">yenat 4.99</p>
+      </div>  
+    </div>
+    <div class="col-12 col-md-2 product-list-product-wrapper">
+      <div class="product-list-product">
+        <img class="product-list-img" src="../assets/images/buitenkaars-berk.png">
+        <h4 class="product-list-title">buitenkaars berk</h4>
+        <p class="product-list-subtitle">yenat 4.99</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-2 product-list-product-wrapper">
+      <div class="product-list-product">
+        <img class="product-list-img" src="../assets/images/buitenkaars.png">
+        <h4 class="product-list-title">buitenkaars berk</h4>
+        <p class="product-list-subtitle">yenat 4.99</p>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn product-list-btn text-uppercase">overzicht ></button> 
+</section>
+<footer class="footer">
+  <div class="col-12 col-md-3 footer-contact-block">
+    <h5 class="footer-block-title">contactgegevens</h5>
+    <p class="footer-content">Dynamostraat 22-24 3903 LK Veenendaat Nederland</p>
+    <p class="footer-content mb-0">Tel : +31 (0)318 - 521 605</p>
+    <p class="footer-content">E-mail: info@my-seasons.nl </p>
+    <p class="footer-content font-weight-bold">Myseasons is een merk van Poken Naturado BV</p>
+  </div>
+  <div class="col-12 col-md-3 footer-nav-block">
+    <h5 class="footer-block-title">navigeer naar</h5>
+    <ul class="navbar-nav">
+        <li class="nav-item" (click)="navigateClick('home')">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item" (click)="navigateClick('product')">
+          <a class="nav-link" href="#product">Producten</a>
+        </li>
+        <li class="nav-item" (click)="navigateClick('verkooppunten')">
+          <a class="nav-link" href="#verkooppunten">Verkooppunten</a>
+        </li>
+        <li class="nav-item" (click)="navigateClick('nieuws')">
+          <a class="nav-link">Nieuws</a>
+        </li>
+        <li class="nav-item" (click)="navigateClick('myseasons')">
+          <a class="nav-link" href="#myseasons">Over Myseasons</a>
+        </li>
+        <li class="nav-item" (click)="navigateClick('klantenservice')">
+          <a class="nav-link">Klantenservice</a>
+        </li>
+    </ul>
+    <div class="social-block">
+      <i class="fab fa-facebook-f social-icon"></i>
+      <i class="fab fa-instagram social-icon"></i>
+      <i class="fab fa-linkedin-in social-icon"></i>
+      <i class="fab fa-youtube social-icon"></i>
+    </div>
+  </div>
+  <div class="col-12 col-md-3 footer-more-info-block">
+    <h5 class="footer-block-title">altijd op de hoogte</h5>
+    <p class="footer-content">Nieuwe producten? Leuke win acties? Altijd als eerste het laatste niewes rondom MySeason ontvangen?</p>
+    <p class="footer-content">Schrijf je gratis is voor ons digitel magzine!</p>
+    <button type="button" class="btn footer-info-btn text-uppercase">gratis aanmelden ></button> 
+  </div>
+  <div class="d-none d-md-flex col-md-3"></div>
+</footer>
